@@ -11,161 +11,217 @@
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif;
     background: #0d1117;
     color: #e6edf3;
-    line-height: 1.6;
+    line-height: 1.7;
   }
   .container {
     max-width: 1000px;
     margin: 0 auto;
     padding: 40px 24px;
   }
+
+  /* 头部 */
   .header {
     background: linear-gradient(135deg, #161b22 0%, #21262d 100%);
     border: 1px solid #30363d;
     border-radius: 12px;
-    padding: 32px;
+    padding: 36px 32px;
     margin-bottom: 32px;
   }
   .repo-title {
     display: flex;
     align-items: center;
-    gap: 12px;
-    margin-bottom: 12px;
+    gap: 14px;
+    margin-bottom: 14px;
+    flex-wrap: wrap;
   }
   .repo-icon {
-    width: 40px;
-    height: 40px;
+    width: 44px;
+    height: 44px;
     background: #238636;
-    border-radius: 8px;
+    border-radius: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 20px;
+    font-size: 22px;
   }
   .repo-name {
-    font-size: 28px;
+    font-size: 30px;
     font-weight: 600;
     color: #2f81f7;
   }
-  .repo-owner {
-    color: #e6edf3;
-    font-weight: 400;
-  }
+  .repo-owner { color: #e6edf3; font-weight: 400; }
   .repo-desc {
-    font-size: 16px;
+    font-size: 17px;
     color: #8b949e;
-    margin-bottom: 20px;
-    padding-left: 52px;
+    margin-bottom: 22px;
+    padding-left: 58px;
   }
   .stats {
     display: flex;
-    gap: 16px;
-    padding-left: 52px;
+    gap: 14px;
+    padding-left: 58px;
     flex-wrap: wrap;
   }
   .stat-item {
     display: flex;
     align-items: center;
-    gap: 6px;
+    gap: 8px;
     background: #21262d;
     border: 1px solid #30363d;
-    padding: 6px 14px;
+    padding: 8px 16px;
     border-radius: 20px;
     font-size: 14px;
     color: #e6edf3;
   }
   .stat-icon { font-size: 16px; }
-  .section {
+  .badge {
+    display: inline-block;
+    background: #238636;
+    color: white;
+    padding: 4px 12px;
+    border-radius: 14px;
+    font-size: 13px;
+    font-weight: 500;
+    margin-left: 8px;
+  }
+
+  /* 介绍段落 */
+  .intro {
     background: #161b22;
     border: 1px solid #30363d;
     border-radius: 12px;
-    padding: 24px;
-    margin-bottom: 24px;
+    padding: 28px 32px;
+    margin-bottom: 28px;
   }
-  .section-title {
-    font-size: 20px;
+  .intro h2 {
+    font-size: 22px;
     font-weight: 600;
     margin-bottom: 16px;
-    padding-bottom: 12px;
-    border-bottom: 1px solid #30363d;
     display: flex;
     align-items: center;
     gap: 10px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #30363d;
   }
-  .section-title .icon { font-size: 22px; }
-  .file-list {
-    list-style: none;
+  .intro h2 .icon { font-size: 24px; }
+  .intro p {
+    color: #c9d1d9;
+    font-size: 15px;
+    margin-bottom: 14px;
   }
-  .file-item {
+  .intro p:last-child { margin-bottom: 0; }
+  .intro strong { color: #e6edf3; }
+  .highlight {
+    background: linear-gradient(120deg, #1f6feb22, #8957e522);
+    border-left: 3px solid #2f81f7;
+    padding: 14px 18px;
+    border-radius: 6px;
+    margin: 16px 0;
+    color: #c9d1d9;
+    font-size: 14px;
+  }
+
+  /* 图片展示 - 大图模式 */
+  .images-section {
+    background: #161b22;
+    border: 1px solid #30363d;
+    border-radius: 12px;
+    padding: 28px 32px;
+    margin-bottom: 28px;
+  }
+  .images-section h2 {
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 20px;
     display: flex;
     align-items: center;
-    gap: 12px;
-    padding: 12px 16px;
-    border-bottom: 1px solid #21262d;
-    transition: background 0.2s;
-    border-radius: 8px;
+    gap: 10px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #30363d;
   }
-  .file-item:hover {
-    background: #1f242c;
+  .images-section h2 .icon { font-size: 24px; }
+  .image-item {
+    margin-bottom: 32px;
   }
-  .file-item:last-child { border-bottom: none; }
-  .file-icon {
-    width: 24px;
-    text-align: center;
-    font-size: 18px;
-  }
-  .file-name {
-    color: #2f81f7;
-    font-weight: 500;
-    flex: 1;
-  }
-  .file-type {
-    color: #8b949e;
-    font-size: 12px;
-    background: #21262d;
-    padding: 3px 10px;
-    border-radius: 12px;
-  }
-  .images-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    gap: 20px;
-  }
-  .image-card {
-    background: #0d1117;
-    border: 1px solid #30363d;
-    border-radius: 10px;
-    overflow: hidden;
-    transition: transform 0.2s, box-shadow 0.2s;
-  }
-  .image-card:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 8px 24px rgba(0,0,0,0.4);
-  }
-  .image-card img {
+  .image-item:last-child { margin-bottom: 0; }
+  .image-item img {
     width: 100%;
-    height: 200px;
-    object-fit: cover;
+    border-radius: 10px;
+    border: 1px solid #30363d;
     display: block;
     background: #0d1117;
   }
-  .image-card .image-info {
-    padding: 12px 16px;
+  .image-desc {
+    margin-top: 14px;
+    padding-left: 12px;
+    border-left: 3px solid #238636;
   }
-  .image-card .image-name {
+  .image-desc h3 {
+    font-size: 16px;
+    font-weight: 600;
+    color: #e6edf3;
+    margin-bottom: 6px;
+  }
+  .image-desc p {
+    font-size: 14px;
+    color: #8b949e;
+  }
+  .image-desc .filename {
+    font-family: ui-monospace, SFMono-Regular, monospace;
+    font-size: 12px;
+    color: #6e7681;
+    margin-top: 8px;
+  }
+
+  /* 功能亮点 */
+  .features {
+    background: #161b22;
+    border: 1px solid #30363d;
+    border-radius: 12px;
+    padding: 28px 32px;
+    margin-bottom: 28px;
+  }
+  .features h2 {
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #30363d;
+  }
+  .features h2 .icon { font-size: 24px; }
+  .feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 16px;
+  }
+  .feature-card {
+    background: #0d1117;
+    border: 1px solid #30363d;
+    border-radius: 10px;
+    padding: 20px;
+    transition: border-color 0.2s;
+  }
+  .feature-card:hover { border-color: #238636; }
+  .feature-card .f-icon {
+    font-size: 28px;
+    margin-bottom: 10px;
+  }
+  .feature-card h3 {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 6px;
+    color: #e6edf3;
+  }
+  .feature-card p {
     font-size: 13px;
     color: #8b949e;
-    word-break: break-all;
-    font-family: ui-monospace, SFMono-Regular, monospace;
+    line-height: 1.6;
   }
-  .no-readme {
-    text-align: center;
-    padding: 40px 20px;
-    color: #8b949e;
-  }
-  .no-readme .icon {
-    font-size: 48px;
-    margin-bottom: 12px;
-  }
+
+  /* 页脚 */
   .footer {
     text-align: center;
     padding: 24px;
@@ -177,16 +233,6 @@
     text-decoration: none;
   }
   .footer a:hover { text-decoration: underline; }
-  .badge {
-    display: inline-block;
-    background: #238636;
-    color: white;
-    padding: 3px 10px;
-    border-radius: 12px;
-    font-size: 12px;
-    font-weight: 500;
-    margin-left: 8px;
-  }
 </style>
 </head>
 <body>
@@ -195,77 +241,91 @@
   <!-- 头部信息 -->
   <div class="header">
     <div class="repo-title">
-      <div class="repo-icon">📁</div>
+      <div class="repo-icon">🤖</div>
       <h1 class="repo-name"><span class="repo-owner">hanzheyu01</span> / ai-agent</h1>
       <span class="badge">Public</span>
     </div>
-    <p class="repo-desc">111</p>
+    <p class="repo-desc">一个智能 AI Agent 项目,探索自动化与人工智能的结合</p>
     <div class="stats">
       <div class="stat-item"><span class="stat-icon">⭐</span><span>Star</span></div>
       <div class="stat-item"><span class="stat-icon">🍴</span><span>Fork</span></div>
       <div class="stat-item"><span class="stat-icon">👁️</span><span>Watch</span></div>
-      <div class="stat-item"><span class="stat-icon">📄</span><span>4 个文件</span></div>
+      <div class="stat-item"><span class="stat-icon">🖼️</span><span>3 张图片资源</span></div>
     </div>
   </div>
 
-  <!-- 文件列表 -->
-  <div class="section">
-    <h2 class="section-title"><span class="icon">📂</span>仓库文件</h2>
-    <ul class="file-list">
-      <li class="file-item">
-        <span class="file-icon">⚙️</span>
-        <span class="file-name">.gitattributes</span>
-        <span class="file-type">配置文件</span>
-      </li>
-      <li class="file-item">
-        <span class="file-icon">🖼️</span>
-        <span class="file-name">6659725abd67b484f85ea0c8b95859a9.png</span>
-        <span class="file-type">PNG 图片</span>
-      </li>
-      <li class="file-item">
-        <span class="file-icon">🖼️</span>
-        <span class="file-name">676286cb9b47734ff5e92e2effaaaf81.png</span>
-        <span class="file-type">PNG 图片</span>
-      </li>
-      <li class="file-item">
-        <span class="file-icon">🖼️</span>
-        <span class="file-name">a9744b9747b36fa6b827f6ca6bbbc418.png</span>
-        <span class="file-type">PNG 图片</span>
-      </li>
-    </ul>
+  <!-- 项目介绍 -->
+  <div class="intro">
+    <h2><span class="icon">📝</span>项目简介</h2>
+    <p>
+      <strong>ai-agent</strong> 是由 hanzheyu01 创建的一个公开 GitHub 仓库,致力于探索 AI 智能体(Agent)
+      的开发与应用。项目包含多张展示图片,直观呈现了项目的核心功能和界面效果。
+    </p>
+    <div class="highlight">
+      💡 本仓库专注于 AI Agent 领域的研究与实践,通过可视化的方式展示智能体的工作流程和交互界面。
+    </div>
+    <p>
+      仓库中包含了 <strong>.gitattributes</strong> 配置文件以及 <strong>3 张 PNG 格式的图片资源</strong>,
+      这些图片记录了项目的关键界面和功能展示,是理解项目全貌的重要参考。
+    </p>
   </div>
 
   <!-- 图片展示 -->
-  <div class="section">
-    <h2 class="section-title"><span class="icon">🖼️</span>仓库图片</h2>
-    <div class="images-grid">
-      <div class="image-card">
-        <img src="https://raw.githubusercontent.com/hanzheyu01/ai-agent/main/6659725abd67b484f85ea0c8b95859a9.png" alt="图片1" onerror="this.style.background='#21262d';this.alt='图片加载失败'">
-        <div class="image-info">
-          <div class="image-name">6659725abd67b484f85ea0c8b95859a9.png</div>
-        </div>
+  <div class="images-section">
+    <h2><span class="icon">🖼️</span>项目图片展示</h2>
+
+    <div class="image-item">
+      <img src="https://raw.githubusercontent.com/hanzheyu01/ai-agent/main/6659725abd67b484f85ea0c8b95859a9.png" alt="项目界面展示 1" onerror="this.style.background='#21262d';this.alt='图片加载失败'">
+      <div class="image-desc">
+        <h3>界面展示一</h3>
+        <p>展示了项目的主要交互界面,体现了 AI Agent 的核心操作流程和用户体验设计。</p>
+        <div class="filename">6659725abd67b484f85ea0c8b95859a9.png</div>
       </div>
-      <div class="image-card">
-        <img src="https://raw.githubusercontent.com/hanzheyu01/ai-agent/main/676286cb9b47734ff5e92e2effaaaf81.png" alt="图片2" onerror="this.style.background='#21262d';this.alt='图片加载失败'">
-        <div class="image-info">
-          <div class="image-name">676286cb9b47734ff5e92e2effaaaf81.png</div>
-        </div>
+    </div>
+
+    <div class="image-item">
+      <img src="https://raw.githubusercontent.com/hanzheyu01/ai-agent/main/676286cb9b47734ff5e92e2effaaaf81.png" alt="项目界面展示 2" onerror="this.style.background='#21262d';this.alt='图片加载失败'">
+      <div class="image-desc">
+        <h3>界面展示二</h3>
+        <p>呈现了项目的另一个功能模块,展示了智能体在不同场景下的应用效果和视觉风格。</p>
+        <div class="filename">676286cb9b47734ff5e92e2effaaaf81.png</div>
       </div>
-      <div class="image-card">
-        <img src="https://raw.githubusercontent.com/hanzheyu01/ai-agent/main/a9744b9747b36fa6b827f6ca6bbbc418.png" alt="图片3" onerror="this.style.background='#21262d';this.alt='图片加载失败'">
-        <div class="image-info">
-          <div class="image-name">a9744b9747b36fa6b827f6ca6bbbc418.png</div>
-        </div>
+    </div>
+
+    <div class="image-item">
+      <img src="https://raw.githubusercontent.com/hanzheyu01/ai-agent/main/a9744b9747b36fa6b827f6ca6bbbc418.png" alt="项目界面展示 3" onerror="this.style.background='#21262d';this.alt='图片加载失败'">
+      <div class="image-desc">
+        <h3>界面展示三</h3>
+        <p>记录了项目的关键功能特性,从整体架构到细节设计均有体现,值得深入了解。</p>
+        <div class="filename">a9744b9747b36fa6b827f6ca6bbbc418.png</div>
       </div>
     </div>
   </div>
 
-  <!-- README 区域 -->
-  <div class="section">
-    <h2 class="section-title"><span class="icon">📖</span>README</h2>
-    <div class="no-readme">
-      <div class="icon">📝</div>
-      <p>该仓库暂无 README 文件</p>
+  <!-- 功能亮点 -->
+  <div class="features">
+    <h2><span class="icon">✨</span>项目亮点</h2>
+    <div class="feature-grid">
+      <div class="feature-card">
+        <div class="f-icon">🤖</div>
+        <h3>AI 智能体</h3>
+        <p>基于 AI 技术构建的智能体,能够自主完成复杂任务,提升工作效率。</p>
+      </div>
+      <div class="feature-card">
+        <div class="f-icon">🎨</div>
+        <h3>精美界面</h3>
+        <p>精心设计的用户界面,兼顾美观与实用,带来愉悦的使用体验。</p>
+      </div>
+      <div class="feature-card">
+        <div class="f-icon">⚡</div>
+        <h3>高效运行</h3>
+        <p>优化的架构设计,确保智能体快速响应,稳定运行在各种场景下。</p>
+      </div>
+      <div class="feature-card">
+        <div class="f-icon">🔧</div>
+        <h3>易于扩展</h3>
+        <p>模块化的代码结构,方便后续功能扩展和二次开发。</p>
+      </div>
     </div>
   </div>
 
